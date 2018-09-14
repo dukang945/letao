@@ -126,4 +126,57 @@ body {
   display: block;
   margin-bottom: 10px;
 }
+.content {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  width: 100%;
+  background: #f5f5f5;
+}
+.content .cate-list {
+  width: 80px;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.content .cate-list .mui-scroll {
+  width: 100%;
+}
+.content .cate-list a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  color: #000;
+  font-size: 14px;
+  background-color: #fff;
+}
+.content .cate-list .active {
+  background-color: #f5f5f5;
+  border-right: none;
+}
+.content .cont-list {
+  margin-left: 90px;
+  height: 100%;
+  position: relative;
+}
+.content .cont-list .mui-scroll-wrapper {
+  width: 100%;
+}
+.content .cont-list .mui-scroll-wrapper .mui-scroll {
+  width: 100%;
+}
+.content .cont-list .mui-scroll-wrapper .mui-scroll a {
+  width: 33.3333%;
+  text-align: center;
+  background-color: #fff;
+  float: left;
+  color: #8f8f94;
+}
+.content .cont-list .mui-scroll-wrapper .mui-scroll a img {
+  width: 100%;
+  display: block;
+}
 /*# sourceMappingURL=index.css.map */
