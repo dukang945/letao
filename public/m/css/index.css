@@ -179,4 +179,47 @@ body {
   width: 100%;
   display: block;
 }
+.mui-scroll-wrapper {
+  top: 44px;
+  bottom: 50px;
+}
+.mui-scroll-wrapper .container {
+  padding: 10px;
+}
+.mui-scroll-wrapper .container .search {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  border: 1px solid #006699;
+  margin-bottom: 20px;
+}
+.mui-scroll-wrapper .container .search input[type="button"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  border-radius: 0;
+  border: 0;
+  background-color: #006699;
+  color: #fff;
+}
+.mui-scroll-wrapper .container .search input[type="text"] {
+  border: none;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.mui-scroll-wrapper .container .title {
+  padding-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #8f8f94;
+}
+.mui-scroll-wrapper .container .title span {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
 /*# sourceMappingURL=index.css.map */
