@@ -24,6 +24,7 @@ body {
   width: 100%;
 }
 .mui-content .mui-slider-item img {
+  display: block;
   width: 100%;
 }
 .nav-link {
@@ -120,7 +121,7 @@ body {
 }
 .product ul li a button {
   background: #006699;
-  color: #FFF;
+  color: #fff;
   margin: 0 auto;
   border: none;
   display: block;
@@ -179,10 +180,6 @@ body {
   width: 100%;
   display: block;
 }
-.mui-scroll-wrapper {
-  top: 44px;
-  bottom: 50px;
-}
 .mui-scroll-wrapper .container {
   padding: 10px;
 }
@@ -222,4 +219,19 @@ body {
   height: 30px;
   line-height: 30px;
 }
-/*# sourceMappingURL=index.css.map */
+#refresh {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  width: 100%;
+}
+#refresh .container {
+  padding: 10px;
+}
+#refresh .container .search-bar {
+  text-align: center;
+  background: #efeff4;
+  padding: 8px 0;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
