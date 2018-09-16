@@ -1,10 +1,11 @@
 .lt-header {
   background-color: #006699;
-  h1, a {
+  h1,
+  a {
     color: #fff;
   }
 }
-body{
+body {
   background-color: #fff;
 }
 .footer {
@@ -22,6 +23,8 @@ body{
   .mui-slider-item {
     width: 100%;
     img {
+      width: 100%;
+      display: block;
       width: 100%;
     }
   }
@@ -53,7 +56,7 @@ body{
   padding: 0 10px;
   img {
     width: 100%;
-    display: block;
+          display: block;
   }
   ul {
     list-style: none;
@@ -108,18 +111,18 @@ body{
           overflow: hidden;
           font-size: 12px;
         }
-        p{
+        p {
           text-align: center;
-          span:first-of-type{
+          span:first-of-type {
             color: red;
           }
-          span:last-of-type{
+          span:last-of-type {
             text-decoration: line-through;
           }
         }
-        button{
+        button {
           background: #006699;
-          color: #FFF;
+          color: #fff;
           margin: 0 auto;
           border: none;
           display: block;
@@ -130,21 +133,21 @@ body{
   }
 }
 
-.content{
+.content {
   position: absolute;
   top: 44px;
   bottom: 50px;
   width: 100%;
   background: #f5f5f5;
-  .cate-list{
+  .cate-list {
     width: 80px;
     float: left;
     height: 100%;
     position: relative;
-    .mui-scroll{
+    .mui-scroll {
       width: 100%;
     }
-    a{
+    a {
       display: block;
       height: 45px;
       line-height: 45px;
@@ -154,27 +157,27 @@ body{
       color: #000;
       font-size: 14px;
       background-color: #fff;
-      }
-    .active{
+    }
+    .active {
       background-color: #f5f5f5;
       border-right: none;
     }
   }
-  .cont-list{
+  .cont-list {
     margin-left: 90px;
     height: 100%;
     position: relative;
-    .mui-scroll-wrapper{
+    .mui-scroll-wrapper {
       width: 100%;
-      .mui-scroll{
+      .mui-scroll {
         width: 100%;
-        a{
+        a {
           width: 33.3333%;
           text-align: center;
           background-color: #fff;
           float: left;
           color: #8f8f94;
-          img{
+          img {
             width: 100%;
             display: block;
           }
@@ -183,3 +186,90 @@ body{
     }
   }
 }
+
+.mui-scroll-wrapper {
+  .container {
+    padding: 10px;
+    .search {
+      position: relative;
+      height: 30px;
+      width: 100%;
+      border: 1px solid #006699;
+      margin-bottom: 20px;
+      input[type="button"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60px;
+        border-radius: 0;
+        border: 0;
+        background-color: #006699;
+        color: #fff;
+      }
+      input[type="text"] {
+        border: none;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        padding: 0 10px;
+      }
+    }
+    .title {
+      padding-bottom: 10px;
+      height: 30px;
+      line-height: 30px;
+      color: #8f8f94;
+      span {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+#refresh{
+  position: absolute;
+  top:44px;
+  bottom: 50px;
+  width: 100%;
+  .container{
+    padding: 10px;
+    .search-bar {
+      text-align: center;
+      background: #efeff4;
+      padding: 8px 0;
+      font-size: 14px;
+      margin-bottom: 15px;
+  }
+  }
+}
+  .login-button{
+    padding: 0 10px;
+    height: auto !important;
+    width: 100% !important;
+    button{
+      display: block;
+      width: 100% !important;
+      margin-top: 20px;
+      background-color: #006699;
+      color: #fff;
+    }
+  }
+  .register{
+    display: block;
+    float: right;
+    margin-top: 20px;
+    padding-right: 10px;
+    color: #006699;
+  }
+  .getCode{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: #006699;
+    transform: translateY(-50%);
+  }
+
+

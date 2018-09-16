@@ -22,7 +22,7 @@ $(function(){
 
 		}
 
-		if(!/^1[4578]\d{9}$/.test(data.mobile)){
+		if(!/^1[34578]\d{9}$/.test(data.mobile)){
 
 			mui.toast('请输入正确格式的手机号');
 
@@ -65,11 +65,6 @@ $(function(){
 			type:'post',
 			url:'/user/register',
 			data:data,
-			beforeSend:function(){
-
-				This.html('正在提交数据...');
-
-			},
 			success:function(result){
 
 				if(result.success){
