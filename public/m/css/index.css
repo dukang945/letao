@@ -24,7 +24,6 @@ body {
   width: 100%;
 }
 .mui-content .mui-slider-item img {
-  display: block;
   width: 100%;
 }
 .nav-link {
@@ -121,7 +120,7 @@ body {
 }
 .product ul li a button {
   background: #006699;
-  color: #fff;
+  color: #FFF;
   margin: 0 auto;
   border: none;
   display: block;
@@ -180,58 +179,4 @@ body {
   width: 100%;
   display: block;
 }
-.mui-scroll-wrapper .container {
-  padding: 10px;
-}
-.mui-scroll-wrapper .container .search {
-  position: relative;
-  height: 30px;
-  width: 100%;
-  border: 1px solid #006699;
-  margin-bottom: 20px;
-}
-.mui-scroll-wrapper .container .search input[type="button"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 60px;
-  border-radius: 0;
-  border: 0;
-  background-color: #006699;
-  color: #fff;
-}
-.mui-scroll-wrapper .container .search input[type="text"] {
-  border: none;
-  height: 28px;
-  line-height: 28px;
-  font-size: 14px;
-  padding: 0 10px;
-}
-.mui-scroll-wrapper .container .title {
-  padding-bottom: 10px;
-  height: 30px;
-  line-height: 30px;
-  color: #8f8f94;
-}
-.mui-scroll-wrapper .container .title span {
-  display: block;
-  height: 30px;
-  line-height: 30px;
-}
-#refresh {
-  position: absolute;
-  top: 44px;
-  bottom: 50px;
-  width: 100%;
-}
-#refresh .container {
-  padding: 10px;
-}
-#refresh .container .search-bar {
-  text-align: center;
-  background: #efeff4;
-  padding: 8px 0;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
+/*# sourceMappingURL=index.css.map */
