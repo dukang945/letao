@@ -69,8 +69,7 @@ function getData() {
 			console.log(res);
 			html += template('productTpl', res);
 			$('#productBox').html(html);
-			console.log(html)
-			This.endPullupToRefresh(res.data.length > 0);
+			This.endPullupToRefresh(res.data.length == 0);
 
 		}
 	});
