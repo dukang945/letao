@@ -1,42 +1,28 @@
-$(function(){
-
-	$.ajax({
-		url:'/user/queryUserMessage',
-		type:'get',
-		success:function(result){
-			
-			if(result.error == 400){
-
-				localStorage.setItem('returnUrl',location.href);
-
-				location.href = "login.html";
-
-			}else{
-
-				var html = template('userTpl',result);
-
-				$('#user').html(html);
-
-			}
-
+$.ajax({
+	type:'get',
+	url:'/user/queryUserMessage',
+	async:false,
+	success:function(res){
+		if (res.error == 400) {
+			location.href ="login.html";
 		}
-	});
+		userinfo = res;
+	}
+});
 
-
+$(function () {
+	var html = template('userTpl',userinfo);
+	$('#user').html(html);
 	$('#logout').on('tap',function(){
-
+		console.log(1)
 		$.ajax({
-			url:'/user/logout',
 			type:'get',
-			success:function(result){
-				if(result.success){
-					location.href="index.html";
-				}else{
-					mui.toast('退出登录失败');
+			url:'/user/logout',
+			success:function(res){
+				if (res.success) {
+					location.href ="index.html";
 				}
 			}
 		})
-
-	});
-
+	})
 });

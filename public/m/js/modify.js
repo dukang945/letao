@@ -1,17 +1,27 @@
-$(function(){
+$.ajax({
+	type: 'get',
+	url: '/user/queryUserMessage',
+	async: false,
+	success: function (res) {
+		if (res.error == 400) {
+			location.href = "login.html";
+		}
+	}
+});
 
-	$('#modifyBtn').on('tap',function(){
 
-		var This = $(this);
 
+$(function () {
+	$('#modifyBtn').on('tap', function () {
 		var data = {
-			oldPassword:$.trim($('[name="originPass"]').val()),
-			newPassword:$.trim($('[name="newPass"]').val()),
-			reNewPassword:$.trim($('[name="sureNewPass"]').val()),
-			vCode:$.trim($('[name="checkCode"]').val())
+			oldPassword: $.trim($('[name="originPass"]').val()),
+			newPassword: $.trim($('[name="newPass"]').val()),
+			reNewPassword: $.trim($('[name="sureNewPass"]').val()),
+			vCode: $.trim($('[name="checkCode"]').val())
 		};
+		console.log(data.vCode);
 
-		if(!data.oldPassword){
+		if (!data.oldPassword) {
 
 			mui.toast('请输入原密码');
 
@@ -19,83 +29,42 @@ $(function(){
 
 		}
 
-		if(!data.newPassword){
-
+		if (!data.newPassword) {
 			mui.toast('请输入新密码');
-
 			return;
 
 		}
 
-
-		if(!data.reNewPassword){
-
-			mui.toast('请输入确认新密码');
-
+		if (data.newPassword != data.reNewPassword) {
+			mui.toast('密码两次输入的不一致');
 			return;
 
 		}
-
-		if(data.newPassword != data.reNewPassword){
-
-			mui.toast('密码两次输入的不一样');
-
-			return;
-
-		}
-
-		if(!/^\d{6}$/.test(data.vCode)){
-
-			mui.toast('验证码的格式不符合要求');
-
-			return;
-
-		}
-
 
 		$.ajax({
-			url:'/user/updatePassword',
-			type:'post',
-			data:data,
-			beforeSend:function(){
-
-				This.html('正在修改密码');
-
-			},
-			success:function(data){
-
-				if(data.success){
-
+			url: '/user/updatePassword',
+			type: 'post',
+			data: data,
+			success: function (res) {
+				console.log(res);
+				if (res.success) {
 					location.href = "login.html";
+				} else {
+					mui.toast('密码修改失败:' + res.message);
 
-				}else{
-
-					This.html('修改密码');
-
-					mui.toast('密码修改失败:'+data.message);
-
-					if(data.error == 400){
-
-						localStorage.setItem('returnUrl',location.href);
-
-						setTimeout(function(){
-
-							location.href = "login.html";
-
-						},2000)
-
-					}
-
-				}		
+				}
 
 			}
 		})
-
-
-
 	});
-
-
-	$('#getCheckCode').on('tap',getCheckCode);
+	$('#getCheckCode').on('tap', function(){
+		$.ajax({
+			type:'get',
+			url:'/user/vCodeForUpdatePassword',
+			success:function(result){
+				console.log(result.vCode);
+			}
+		});
+	});
 
 })

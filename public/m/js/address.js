@@ -11,30 +11,30 @@ $(function(){
 
 
 
-	// 删除收货地址
-	$('body').on('tap','.deleteAdress',function(){
+	// // 删除收货地址
+	// $('body').on('tap','.deleteAdress',function(){
 
-		$.ajax({
-			url:'/address/deleteAddress',
-			type:'post',
-			data:{
-				id:$(this).attr('data-id')
-			},
-			success:function(result){
+	// 	$.ajax({
+	// 		url:'/address/deleteAddress',
+	// 		type:'post',
+	// 		data:{
+	// 			id:$(this).attr('data-id')
+	// 		},
+	// 		success:function(result){
 
-				if(result.success){
+	// 			if(result.success){
 
-					location.reload();
+	// 				location.reload();
 
-				}else{
+	// 			}else{
 
-					mui.toast('删除地址失败');
+	// 				mui.toast('删除地址失败');
 
-				}
+	// 			}
 
-			}
-		})
+	// 		}
+	// 	})
 
-	});
+	// });
 
 })

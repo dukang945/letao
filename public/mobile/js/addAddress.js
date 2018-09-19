@@ -1,4 +1,4 @@
-$(function(){
+ $(function(){
 
 	// 省市区弹出框
 	var cityPicker = new mui.PopPicker({layer:3});
